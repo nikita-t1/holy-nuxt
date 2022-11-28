@@ -1,19 +1,15 @@
-FROM node:12.16.3-alpine3.9
+FROM node:17-alpine
 
-RUN mkdir -p /var/www/dockerize-nuxt/nuxt-app
-WORKDIR /var/www/dockerize-nuxt/nuxt-app
+ENV HOST='0.0.0.0'
+ENV PORT='3000'
 
-COPY package*.json ./
+WORKDIR /webapp
+
+COPY ./ /webapp
+
 RUN npm install
-
-COPY . .
-
 RUN npm run build
 
 EXPOSE 3000
 
-ENV NUXT_HOST=0.0.0.0
-
-ENV NUXT_PORT=3000
-
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "start" ]
