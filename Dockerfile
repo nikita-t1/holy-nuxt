@@ -11,4 +11,6 @@ RUN npm run build
 
 EXPOSE 3000
 
-CMD [ "node", ".\\.output\\server\\index.mjs" ]
+WORKDIR /nuxt-app/.output/server
+
+CMD [ "node", "index.mjs" ]
