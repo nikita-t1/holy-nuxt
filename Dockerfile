@@ -1,6 +1,6 @@
 FROM node:17-alpine
 
-ENV NITRO_HOST ='127.0.0.1'
+ENV NITRO_HOST ='0.0.0.0'
 ENV NITRO_PORT ='3000'
 
 WORKDIR /nuxt-app
