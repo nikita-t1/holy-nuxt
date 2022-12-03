@@ -1,4 +1,5 @@
 export default defineEventHandler(() => {
     'Hello World!';
-    console.log("server?¶")
+    console.log(process.env)
+
 })
