@@ -8,7 +8,7 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - NITRO_HOST=0.0.0.0
+      - NITRO_HOST=${NITRO_HOST}
       - NITRO_PORT=${NITRO_PORT}
       - SUPABASE_URL=${SUPABASE_URL}
       - SUPABASE_KEY=${SUPABASE_KEY}
