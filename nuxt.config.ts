@@ -4,5 +4,8 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         '@nuxtjs/supabase',
     ],
+    supabase: {
+        url: process.env.SUPABASE_URL
+    }
 
 })
