@@ -9,5 +9,7 @@ services:
       - '3000:3000'
     environment:
       - NITRO_HOST=0.0.0.0
-      - NITRO_PORT=3000
+      - NITRO_PORT=${NITRO_PORT}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
     command: 'node .//.output//server//index.mjs'
