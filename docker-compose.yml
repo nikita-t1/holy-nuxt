@@ -7,7 +7,7 @@ services:
     container_name: nuxt-app
     restart: unless-stopped
     ports:
-      - '127.0.0.1:3000:3000'
+      - '127.0.0.1:${NITRO_PORT}:${NITRO_PORT}'
     environment:
       - NITRO_HOST=${NITRO_HOST}
       - NITRO_PORT=${NITRO_PORT}
