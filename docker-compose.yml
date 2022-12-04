@@ -18,8 +18,7 @@ services:
       default:
         ipv4_address: ${IP_ADDRESS}
 
-  networks:
-    default:
-      external:
-        name: ${NETWORK_NAME}
-#      external: true
+networks:
+  default:
+    name: ${NETWORK_NAME}
+    external: true
