@@ -7,7 +7,7 @@ WORKDIR /nuxt-app
 COPY ./ /nuxt-app
 
 RUN npm install
-RUN npm run build
+# RUN npm run build
 
 EXPOSE 3000
 
